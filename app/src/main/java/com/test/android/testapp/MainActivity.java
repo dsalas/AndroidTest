@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import java.lang.*;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private String MOVIMIENTO = "";
 
     private static final String TAG  = "MovBancario";
-    private static Semaphore semaphoreMovBancario = new Semaphore(1,true);
+    private static Semaphore semaphoreMovBancario = new Semaphore(1);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,9 +75,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void inicializarVariable() {
         etxtSaldoInicial = (EditText) findViewById(R.id.editText3);
-        etxtSaldoInicial = (EditText) findViewById(R.id.editText4);
+        etxtSaldoFinal = (EditText) findViewById(R.id.editText4);
         txtvMovimient = (TextView) findViewById(R.id.textView5);
-
+        etxtSaldoInicial.setText("");
+        etxtSaldoFinal.setText("");
         SALDO_DISPONIBLE = 1000;
         MONTO_INICIAL = 1000;
         findViewById(R.id.process_btn).setOnClickListener(new HandleClick());
@@ -91,12 +93,12 @@ public class MainActivity extends AppCompatActivity {
             switch (view.getId()) {
                 case R.id.process_btn:
                     for(int i=0; i<100; i++) {
-                        int montoARetirar= (int) (Math.random()*100) + 1;
+                        int montoARetirar = (int) (Math.random()*100) + 1;
                         MovimientoBancario movimientoBancario = new MovimientoBancario(montoARetirar,i);
                         //movimientoBancario.run();
                         Thread hiloMovimientoBancario = new Thread(movimientoBancario);
-                        //runOnUiThread(movimientoBancario);
                         hiloMovimientoBancario.start();
+                        //runOnUiThread(hiloMovimientoBancario);
                     }
             }
         }
@@ -114,14 +116,36 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void run(){
-            Log.i(TAG, "run: Orden " + orden + "--> Monto a retirar:" + montoARetirar);
-            if (SALDO_DISPONIBLE >= montoARetirar){
-                SALDO_DISPONIBLE = SALDO_DISPONIBLE - montoARetirar;
-                Log.i(TAG, "run: Orden: " + orden + "--> retiro" + montoARetirar + "--> SALDO DISPONIBLE" + SALDO_DISPONIBLE);
+            try {
+                semaphoreMovBancario.acquire();
+                Log.i(TAG, "run: Orden " + orden + "--> Monto a retirar:" + montoARetirar);
+                if (SALDO_DISPONIBLE >= montoARetirar) {
+                    SALDO_DISPONIBLE = SALDO_DISPONIBLE - montoARetirar;
+                    Log.i(TAG, "run: Orden: " + orden + "--> retiro" + montoARetirar + "--> SALDO DISPONIBLE" + SALDO_DISPONIBLE);
+                } else {
+                    Log.i(TAG, "run: Orden: " + orden + "--> SALDO INSUFICIENTE: " + SALDO_DISPONIBLE);
+                }
+                MOVIMIENTO = MOVIMIENTO + (char)13 + (char)10 +"Orden: " + orden + " Retiro: " + montoARetirar + " Saldo: " + SALDO_DISPONIBLE;
 
-            } else {
-                Log.i(TAG, "run: Orden: " + orden + "-->SALDO DISPONILBE: " + SALDO_DISPONIBLE);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                semaphoreMovBancario.release();
+            } finally {
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        txtvMovimient.setText(MOVIMIENTO);
+                        etxtSaldoFinal.setText(String.valueOf(SALDO_DISPONIBLE));
+                        try {
+                            TimeUnit.SECONDS.sleep(1);
+                        } catch (Exception e) {
+                            System.out.println("ASD");
+                        }
+                    }
+                });
+                semaphoreMovBancario.release();
             }
+
+
         }
     }
 }
