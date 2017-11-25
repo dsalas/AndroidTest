@@ -135,17 +135,15 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         txtvMovimient.setText(MOVIMIENTO);
                         etxtSaldoFinal.setText(String.valueOf(SALDO_DISPONIBLE));
-                        try {
-                            TimeUnit.SECONDS.sleep(1);
-                        } catch (Exception e) {
-                            System.out.println("ASD");
-                        }
                     }
                 });
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (Exception e) {
+                    System.out.println("ASD");
+                }
                 semaphoreMovBancario.release();
             }
-
-
         }
     }
 }
