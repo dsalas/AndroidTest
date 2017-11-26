@@ -138,7 +138,7 @@
                 android:text="Empresa" />
 
             <EditText
-                android:id="@+id/editTextEmpresa"
+                android:id="@+id/editTextEnterprise"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
