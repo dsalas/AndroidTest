@@ -11,7 +11,7 @@ public class DataSource {
     public static final String INT_TYPE ="integer";
     public static final String NUMERIC_TYPE ="real";
 
-    public static final String CREATE_USER = "create table IF NOT EXITS " + USER_TABLE + "(" +
+    public static final String CREATE_USER = "create table IF NOT EXISTS " + USER_TABLE + "(" +
             Contract.User.userId + " " + INT_TYPE + " primary key," +
             Contract.User.username + " " + STRING_TYPE + "not null,"+
             Contract.User.name + " " + STRING_TYPE + "not null,"+

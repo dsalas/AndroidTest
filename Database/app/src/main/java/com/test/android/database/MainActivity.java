@@ -6,7 +6,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 import android.content.Context;
+import com.test.android.database.dao.UserDAO;
+import com.test.android.database.entity.User;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     //Text fields
@@ -75,11 +82,30 @@ public class MainActivity extends AppCompatActivity {
 
     private void add(Context context) {
         Log.i("TAG","add");
+        UserDAO userDAO = new UserDAO(context);
+        User user = new User();
+        user.id = Integer.valueOf(editTextId.getText().toString());
+        user.username = editTextUsername.getText().toString();
+        user.password = editTextPassword.getText().toString();
+        user.name = editTextName.getText().toString();
+        user.lastname = editTextLastName.getText().toString();
+        user.enterpriseId = Integer.valueOf(editTextEnterprise.getText().toString());
+        userDAO.insert(user);
+        Toast toast = Toast.makeText(context,"Se agrego el usuario", Toast.LENGTH_LONG);
+        toast.show();
     }
 
     private void get(Context context) {
         Log.i("TAG","get");
-
+        UserDAO userDao = new UserDAO(context);
+        int userid = Integer.valueOf(editTextId.getText().toString());
+        User user = userDao.get(userid);
+        editTextId.setText(String.valueOf(user.id));
+        editTextUsername.setText(user.username);
+        editTextPassword.setText(user.password);
+        editTextName.setText(user.name);
+        editTextLastName.setText(user.lastname);
+        editTextEnterprise.setText(String.valueOf(user.enterpriseId));
     }
 
     private void delete(Context context) {
@@ -90,6 +116,15 @@ public class MainActivity extends AppCompatActivity {
     private void list(Context context) {
         Log.i("TAG","list");
 
+        UserDAO userDao = new UserDAO(context);
+        ArrayList<User> userList = userDao.list();
+        /*for(User user:userList){
+
+        }*/
+        /* Error con gson
+        Gson gson = new Gson();
+        String listaJsonUsuario = gson.toJson(userList);
+        Log.i("USER",listaJsonUsuario);*/
     }
 
 }

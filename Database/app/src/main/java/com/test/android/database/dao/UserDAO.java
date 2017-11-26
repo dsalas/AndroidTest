@@ -90,7 +90,7 @@ public class UserDAO {
         return model;
     }
 
-    public ArrayList<User> list(int guserid) throws DAOException {
+    public ArrayList<User> list() throws DAOException {
         Log.i(TAG, "UsuarioDAO: get");
         SQLiteDatabase db = _dBHelper.getReadableDatabase();
         ArrayList<User> model = new ArrayList<User>();
