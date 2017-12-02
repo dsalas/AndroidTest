@@ -5,20 +5,23 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
     private EditText input;
-    private Button initProces;
     private ListView productListView;
     String[] from;
     int[] to;
-    ArrayList<HashMap<String, String>> productList;
+    ArrayList<HashMap<String, String>> productList = new ArrayList<HashMap<String, String>>();
     SimpleAdapter productListAdapter;
 
     @Override
@@ -36,12 +39,73 @@ public class MainActivity extends AppCompatActivity {
                 if (arg2.getAction() == KeyEvent.ACTION_UP) {
                     if (arg1 == KeyEvent.KEYCODE_ENTER) {
                         Log.i("DB", "onKey: Enter");
-                        //Add product
+                        //Add products
+                        addProduct();
                     }
                 }
                 return false;
             }
 
         });
+        View.OnFocusChangeListener ofcListener = new MyFocusChangeListener();
+        input.setOnFocusChangeListener(ofcListener);
+        input.requestFocus();
+
+        productListView = (ListView) findViewById(R.id.listView);
+        setAddProduct(R.layout.product_adapter);
+        AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                Log.i("CLICK","Click listener");
+                productList.remove(position);
+                productListAdapter.notifyDataSetChanged();
+            }
+        };
+        productListView.setOnItemClickListener(listener);
+    }
+
+    private class MyFocusChangeListener implements View.OnFocusChangeListener{
+        @Override
+        public void onFocusChange(View v, boolean hasFocus) {
+            Log.d("FOCUS","Focus change");
+            if (v.getId() == R.id.editText) {
+                if (!hasFocus) {
+                    Log.i("FOCUS", "onFocusChange: relocate");
+                    input.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            input.requestFocus();
+                        }
+                    });
+                }
+            } else {
+                Log.i("FOCUS", "onFocusChange: no action");
+            }
+        }
+    }
+
+    private void setAddProduct(Integer xlayout){
+        from = new String[]{"product","start_time"};
+        to = new int[] {R.id.textView1, R.id.textView2};
+        productListAdapter = new SimpleAdapter(this, productList, xlayout, from, to);
+        if (productListView == null) {
+            productListView = (ListView) findViewById(R.id.listView);
+        }
+        productListView.setAdapter(productListAdapter);
+
+    }
+
+    private void addProduct(){
+        String product_name = input.getText().toString();
+        if (product_name.equals("")) {
+            return;
+        }
+        input.setText("");
+        HashMap<String,String> product = new HashMap<String, String>();
+        product.put("product", product_name);
+        product.put("start_time", new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime()));
+        productList.add(product);
+        Log.i("PRODUCT","Adding "+product_name);
+        productListAdapter.notifyDataSetChanged();
     }
 }
