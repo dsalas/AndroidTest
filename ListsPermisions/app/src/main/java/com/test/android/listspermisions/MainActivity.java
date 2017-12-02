@@ -1,5 +1,7 @@
 package com.test.android.listspermisions;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,11 +12,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class MainActivity extends AppCompatActivity {
     private EditText input;
@@ -54,11 +58,27 @@ public class MainActivity extends AppCompatActivity {
         productListView = (ListView) findViewById(R.id.listView);
         setAddProduct(R.layout.product_adapter);
         AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position,
+            public void onItemClick(AdapterView<?> parent, View view, final int position,
                                     long id) {
                 Log.i("CLICK","Click listener");
-                productList.remove(position);
-                productListAdapter.notifyDataSetChanged();
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage("Desea elminar el producto " + productList.get(position).get("product"));
+                builder.setTitle("Eliminar");
+                builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        productList.remove(position);
+                        productListAdapter.notifyDataSetChanged();
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         };
         productListView.setOnItemClickListener(listener);
@@ -100,6 +120,11 @@ public class MainActivity extends AppCompatActivity {
         if (product_name.equals("")) {
             return;
         }
+        if (containsProduct(product_name)) {
+            Toast toast = Toast.makeText(this, "El producto ya existe.", Toast.LENGTH_SHORT);
+            toast.show();
+            return;
+        }
         input.setText("");
         HashMap<String,String> product = new HashMap<String, String>();
         product.put("product", product_name);
@@ -107,5 +132,16 @@ public class MainActivity extends AppCompatActivity {
         productList.add(product);
         Log.i("PRODUCT","Adding "+product_name);
         productListAdapter.notifyDataSetChanged();
+    }
+
+    private boolean containsProduct(String product_name){
+        Iterator<HashMap<String,String>> iterator = productList.iterator();
+        while (iterator.hasNext()) {
+            HashMap<String,String> product = iterator.next();
+            if (product.containsValue(product_name)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
