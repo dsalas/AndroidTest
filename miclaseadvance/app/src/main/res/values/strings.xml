@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">miclase</string>
+    <string name="permisos_texto">Dar Permiso camara</string>
+    <string name="permisos_tomar_foto">Tomar Foto</string>
+
+    <string name="permit_message">Para el correcto funcionamiento de la aplicación, es necesario que actives los siguientes permisos:</string>
+    <string name="permit_location">Ubicación.</string>
+    <string name="permit_phone">Teléfono.</string>
+    <string name="permit_sms">SMS.</string>
+    <string name="permit_storage">Almacenamiento.</string>
+    <string name="permit_button">Activar Permisos</string>
+</resources>
