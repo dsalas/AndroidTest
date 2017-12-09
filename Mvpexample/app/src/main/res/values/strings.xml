@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mvpexample</string>
+    <string name="action_settings">Settings</string>
+    <string name="username_error">Usuario no puede ser vacio</string>
+    <string name="password_error">Password no puede ser vacio</string>
+    <string name="title_activity_home">HomeActivity</string>
+</resources>
