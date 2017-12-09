@@ -1,5 +1,8 @@
 package com.example.user.mvpexample;
 
+import android.widget.EditText;
+import org.w3c.dom.Text;
+
 /**
  * Created by User on 17/05/2016.
  */
@@ -42,6 +45,15 @@ public class LoginPresenterImpl implements LoginPresenter, LoginInteractor.OnLog
     @Override public void onSuccess() {
         if (loginView != null) {
             loginView.navigateToHome();
+        }
+    }
+
+
+    @Override public void showPasswordClicked(EditText passfield){
+        if (passfield.getTransformationMethod() == null) {
+            loginView.hidePassword();
+        } else {
+            loginView.showPassword();
         }
     }
 }

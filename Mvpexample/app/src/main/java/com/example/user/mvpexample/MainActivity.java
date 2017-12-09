@@ -1,15 +1,19 @@
 package com.example.user.mvpexample;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity  implements LoginView, View.OnClickListener  {
@@ -18,6 +22,7 @@ public class MainActivity extends AppCompatActivity  implements LoginView, View.
     private EditText username;
     private EditText password;
     private LoginPresenter presenter;
+    private ImageButton showPasswordButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +33,15 @@ public class MainActivity extends AppCompatActivity  implements LoginView, View.
         progressBar = (ProgressBar) findViewById(R.id.progress);
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
+        showPasswordButton = (ImageButton) findViewById(R.id.showPasswordButton);
         findViewById(R.id.button).setOnClickListener(this);
-
         presenter = new LoginPresenterImpl(this);
+        showPasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.showPasswordClicked(password);
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -92,5 +103,13 @@ public class MainActivity extends AppCompatActivity  implements LoginView, View.
 
     @Override public void onClick(View v) {
         presenter.validateCredentials(username.getText().toString(), password.getText().toString());
+    }
+
+    @Override public  void showPassword() {
+        password.setTransformationMethod(null);
+    }
+
+    @Override public void hidePassword() {
+        password.setTransformationMethod(new PasswordTransformationMethod());
     }
 }

@@ -18,6 +18,9 @@
         android:drawableLeft="@drawable/ic_action_person"
         android:drawablePadding="8dp"
         />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
@@ -28,6 +31,16 @@
         android:drawableLeft="@drawable/ic_action_accounts"
         android:drawablePadding="8dp"
         />
+    <ImageButton
+        android:id="@+id/showPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_eye"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:text="Button"/>
+    </RelativeLayout>
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
