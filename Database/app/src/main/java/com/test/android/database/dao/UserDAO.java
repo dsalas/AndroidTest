@@ -134,4 +134,12 @@ public class UserDAO {
         return model;
     }
 
+    public void delete(int userid) {
+        Log.i(TAG, "UsuarioDAO: delete");
+        SQLiteDatabase db = _dBHelper.getReadableDatabase();
+        db.delete(DataSource.USER_TABLE, Contract.User.userId + " = ?",
+                new String[] { String.valueOf(userid) });
+        db.close();
+    }
+
 }
