@@ -1,0 +1,7 @@
+#Sat Dec 16 16:07:14 COT 2017
+base.0=C\:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_06f9a51eed02ccc7edc1cdba53681250ed5e21c7
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_74c8e1826562171f1c147f65d85037b81c792bdd\\classes.dex
+base.1=C\:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_74c8e1826562171f1c147f65d85037b81c792bdd
+file.0=C\:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_06f9a51eed02ccc7edc1cdba53681250ed5e21c7\\classes.dex

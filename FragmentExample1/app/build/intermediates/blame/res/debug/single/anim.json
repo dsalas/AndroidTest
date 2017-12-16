@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\JAVA\\.android\\build-cache\\5212305f42fbb13cf077078ceba3600a0e9deeb3\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tooltip_enter.xml",
+        "source": "C:\\Users\\Administrador\\.android\\build-cache\\a8ecd9c1229f0926f49e21257d8d1a1ed1b10e6a\\output\\res\\anim\\tooltip_enter.xml"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Administrador\\.android\\build-cache\\a8ecd9c1229f0926f49e21257d8d1a1ed1b10e6a\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\JAVA\\.android\\build-cache\\5212305f42fbb13cf077078ceba3600a0e9deeb3\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\JAVA\\.android\\build-cache\\5212305f42fbb13cf077078ceba3600a0e9deeb3\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tooltip_exit.xml",
+        "source": "C:\\Users\\Administrador\\.android\\build-cache\\a8ecd9c1229f0926f49e21257d8d1a1ed1b10e6a\\output\\res\\anim\\tooltip_exit.xml"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Administrador\\.android\\build-cache\\a8ecd9c1229f0926f49e21257d8d1a1ed1b10e6a\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Administrador\\.android\\build-cache\\a8ecd9c1229f0926f49e21257d8d1a1ed1b10e6a\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Administrador\\.android\\build-cache\\a8ecd9c1229f0926f49e21257d8d1a1ed1b10e6a\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\JAVA\\.android\\build-cache\\5212305f42fbb13cf077078ceba3600a0e9deeb3\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Administrador\\.android\\build-cache\\a8ecd9c1229f0926f49e21257d8d1a1ed1b10e6a\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\JAVA\\.android\\build-cache\\5212305f42fbb13cf077078ceba3600a0e9deeb3\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Administrador\\.android\\build-cache\\a8ecd9c1229f0926f49e21257d8d1a1ed1b10e6a\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\JAVA\\.android\\build-cache\\5212305f42fbb13cf077078ceba3600a0e9deeb3\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tooltip_exit.xml",
+        "source": "C:\\Users\\JAVA\\.android\\build-cache\\5212305f42fbb13cf077078ceba3600a0e9deeb3\\output\\res\\anim\\tooltip_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\JAVA\\.android\\build-cache\\5212305f42fbb13cf077078ceba3600a0e9deeb3\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Administrador\\.android\\build-cache\\a8ecd9c1229f0926f49e21257d8d1a1ed1b10e6a\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\JAVA\\.android\\build-cache\\5212305f42fbb13cf077078ceba3600a0e9deeb3\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\JAVA\\.android\\build-cache\\5212305f42fbb13cf077078ceba3600a0e9deeb3\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tooltip_enter.xml",
+        "source": "C:\\Users\\JAVA\\.android\\build-cache\\5212305f42fbb13cf077078ceba3600a0e9deeb3\\output\\res\\anim\\tooltip_enter.xml"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Administrador\\.android\\build-cache\\a8ecd9c1229f0926f49e21257d8d1a1ed1b10e6a\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\JAVA\\.android\\build-cache\\5212305f42fbb13cf077078ceba3600a0e9deeb3\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Administrador\\.android\\build-cache\\a8ecd9c1229f0926f49e21257d8d1a1ed1b10e6a\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Administrador\\.android\\build-cache\\a8ecd9c1229f0926f49e21257d8d1a1ed1b10e6a\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher_round.png",
+        "source": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "D:\\gcampos\\android\\ws\\cibertec\\android-advanced-master\\FragmentExample1\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher_round.png",
+        "source": "C:\\Users\\JAVA\\Documents\\Trabajo\\FragmentExample1\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    }
+]
